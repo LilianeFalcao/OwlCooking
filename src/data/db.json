@@ -1,0 +1,48 @@
+{
+  "users": [
+    {
+      "id": "0116",
+      "nickName": "LinnH",
+      "email": "linnyohan@gmail.com",
+      "senha": "123456789"
+    },
+    {
+      "id": "5805",
+      "nickName": "Gio",
+      "email": "linn@gmail.com",
+      "senha": "123123123"
+    },
+    {
+      "id": "7a83",
+      "nickName": "Hawks",
+      "email": "dddd@g.com",
+      "senha": "123123123"
+    }
+  ],
+  "receitas": [
+    {
+      "id": "1",
+      "title": "Misto quente de forno",
+      "desc": "aaaaaaaaaaaaaaaaaaaaaa",
+      "imageUrl": "https://comidinhasdochef.com/wp-content/uploads/2016/02/Misto-Quente-de-Forno.jpg"
+    },
+    {
+      "id": "2",
+      "title": "Caipirinha",
+      "desc": "aaaaaaaaaaaaaaaaaaaaaa",
+      "imageUrl": "https://imgs.search.brave.com/tfAH0w-VfgO_-dlc8AaybSP14ctSXnHGq5kMpSY3lR4/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/cmVjZWl0ZXJpYS5j/b20uYnIvd3AtY29u/dGVudC91cGxvYWRz/L2NhaXBpcmluaGEt/ZGUtbGltYW8tMS03/MzB4NDgwLmpwZw"
+    },
+    {
+      "id": "3",
+      "title": "Picolé salada de frutas",
+      "desc": "aaaaaaaaaaaaaaaaaaaaaa",
+      "imageUrl": "https://imgs.search.brave.com/-QiG9Kmw2Z5Iwk1TuYzE9FEMLfpGrRfm9WBYqXDPpC8/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/bGF5bGl0YS5jb20v/cmVjZWl0YXMvd3At/Y29udGVudC91cGxv/YWRzLzIwMTgvMDQv/UmVjZWl0YS1waWNv/bGUtZGUtbW9yYW5n/by5qcGc"
+    },
+    {
+      "id": "4",
+      "title": "Dadinho de tapioca",
+      "desc": "aaaaaaaaaaaaaaaaaaaaaa",
+      "imageUrl": "https://www.mariareceita.com.br/wp-content/uploads/2022/03/receita-dadinho-tapioca-facil-original-1200x900.jpg"
+    }
+  ]
+}

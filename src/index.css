@@ -11,3 +11,90 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+form{
+  max-width: 40%;
+  margin: 0 auto;
+}
+
+label{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+
+label span{
+  margin-bottom: .3em;
+  font-weight: bold;
+  text-align: left;
+}
+
+input, textarea{
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: .8em 0;
+  background-color: transparent;
+}
+
+.btn{
+  background-color: #222;
+  color: goldenrod;
+  align-items: center;
+  border-radius:5px;
+  text-decoration: none;
+  width: 130px;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 15px;
+  font-size: 1em;
+  margin-top: .5em;
+  flex-direction: column;
+  border: none;
+  margin-bottom: 10em;
+  margin-left: 25px;
+}
+
+.btn.btn-dark{
+  background-color: goldenrod;
+  border-radius: 0;
+  color: #222;
+}
+
+
+.btn.btn-outline{
+  background-color: transparent;
+  border-radius: 0;
+  margin: 0;
+  border: 1px solid black;
+  padding: 7px 30px;
+  margin-left: 65em;
+  color:white;
+}
+
+.btn:hover{
+  background-color: goldenrod;
+  color: #222;
+}
+
+.btn.btn-outline:hover{
+  background-color: black;
+  color: white;
+}
+
+.btn.btn-danger:hover{
+  background-color: #bd0404;
+  color: white;
+}
+
+button[disabled] {
+  background-color: #000000;
+}
+
+.container .error{
+  color: #721C24;
+  background-color: #f7a9b0;
+  border: 1px solid #f08a92;
+  padding: 5px;
+  border-radius: 5px;
+}

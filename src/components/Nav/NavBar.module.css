@@ -1,0 +1,48 @@
+/* App.css */
+.navB {
+    display: flex;
+    justify-content: space-between;
+    background-color: #222;
+    align-items: center;
+    padding: 25px;
+    height: 60px;
+}
+
+.navList {
+    display: flex;
+    gap: 25px; /* Espaçamento entre os links */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.links {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.TitleBar{
+    font-size: 1.5em;
+    text-decoration: none;
+    color: white;
+}
+.TitleBar span{
+    font-weight: 900;
+    text-transform: uppercase;
+    color: goldenrod;
+}
+.links:hover {
+    text-decoration: underline;
+}
+
+.btnSair{    
+    font-size: 18px;
+    background-color: #222;
+    align-items: center;
+    color: aliceblue;
+    border:  none;
+}
+.btnSair:hover {
+    text-decoration: underline;
+}
