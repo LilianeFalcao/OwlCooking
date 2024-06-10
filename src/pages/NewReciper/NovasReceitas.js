@@ -1,36 +1,55 @@
-import React from 'react'
-import styles from "./NovasReceitas.module.css"
-import useForm from '../../hooks/useForm'
-import { useFetch } from '../../hooks/useFetch'
-import { useNavigate } from 'react-router-dom'
+import React from 'react';
+import styles from "./NovasReceitas.module.css";
+import useForm from '../../hooks/useForm';
+import { useNavigate } from 'react-router-dom';
 
-const NovasReceitas = ({ URLReceitas }) => {
-  const { httpConfig } = useFetch(URLReceitas)
-  const navigate = useNavigate()
+const NovasReceitas = () => {
+  
+  const navigate = useNavigate();
+  const URLReceitas = "http://localhost:3000/receitas";
+
   const { form, onChangeInputs, clearInputs } = useForm({
     title: "",
     desc: "",
     imageUrl: "",
-  })
+  });
 
-  const AddReceita = async (e) => {
-    e.preventDefault()
+  const addReceita = async (e) => {
+    e.preventDefault();
 
-    const ReceitasDetails = {
+    const receitaDetails = {
       title: form.title,
       desc: form.desc,
       imageUrl: form.imageUrl,
-    }
+    };
 
-    httpConfig(ReceitasDetails, "POST")
-    navigate("/home")
-    clearInputs()
-  }
+    try {
+      const response = await fetch(`${URLReceitas}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(receitaDetails),
+      });
+      
+      if (!response.ok) {
+        throw new Error('Falha ao adicionar a receita');
+      }
+
+      const newReceita = await response.json();
+      console.log('Receita adicionada com sucesso', newReceita);
+
+      clearInputs();
+      navigate("/home");
+    } catch (error) {
+      console.log('Erro ao adicionar receita:', error.message);
+    }
+  };
 
   return (
     <div>
       <h1 className={styles.Hgs}>Adicione uma nova receita</h1>
-      <form onSubmit={AddReceita}>
+      <form onSubmit={addReceita}>
         <label>
           <span>Título:</span>
           <input 
@@ -60,10 +79,10 @@ const NovasReceitas = ({ URLReceitas }) => {
             name="desc" 
           />
         </label>
-        <button className="btn" >Adicionar Receita</button>
+        <button className="btn">Adicionar Receita</button>
       </form>
     </div>
-  )
+  );
 }
 
-export default NovasReceitas
+export default NovasReceitas;

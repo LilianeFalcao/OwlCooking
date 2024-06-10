@@ -1,80 +1,99 @@
 import { useEffect, useState } from 'react'
 
-export const useFetch = (urlBase) => {
-  const [dados, setDados] = useState(null);
-  const [config, setConfig] = useState(null);
-  const [method, setMethod] = useState(null);
-  const [callFetch, setCallFetch] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
-  const [itemId, setItemId] = useState(null);
+export const useFetch = (URLReceitas) => {
 
+  const [dados, setDados] = useState(null);
+
+  //refazendo o POST usando o custom hook
+  const [config, setConfig ] = useState(null);
+  const [method, setMethod ] = useState(null);
+  const [callFecth, setCallFecth] = useState(false);
+
+  //loading
+  const [loading, setLoanding] = useState(false);
+
+  //tratamento de erros
+  const [error, setError] = useState(null);
+  //delete state id 
+  const [itemId, setItemId] = useState(null);
+  
+  //função q faz a config
   const httpConfig = (dados, method) => {
-    if (method === "POST") {
+    if(method === "POST"){
       setConfig({
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type" : "application/json",
         },
         body: JSON.stringify(dados)
       });
-      setMethod("POST");
-    } else if (method === "DELETE") {
+
+      console.log("deu porra", dados)
+      setMethod(method);
+    } else if(method === "DELETE"){
       setConfig({
         method: "DELETE",
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type" : "application/json",
         },
       });
-      setMethod("DELETE");
+
+      setMethod(method);
       setItemId(dados);
     }
   }
+  
+  //effect pega os dados get
+  useEffect(() =>{
+    const fecthData = async() =>{ 
+      //try catch com error
+        setLoanding(true);
+        
+        try {
+          const resp = await fetch(URLReceitas);
+          const data = await resp.json();
 
-  useEffect(() => {
-    const fetchData = async () => {
-      setLoading(true);
-      try {
-        const resp = await fetch(urlBase);
-        if (!resp.ok) throw new Error("Erro ao carregar os dados");
-        const data = await resp.json();
-        setDados(data);
-      } catch (error) {
-        console.error(error.message);
-        setError("Houve um erro ao carregar dados!");
-      }
-      setLoading(false);
+          setDados(data);
+          
+        } catch (error) {
+          console.log(error.message);
+          setError("Houve um erro ao carregar dados!")
+        }
+
+        setLoanding(false);
     };
 
-    fetchData();
-  }, [urlBase, callFetch]);
+    fecthData();
 
-  useEffect(() => {
-    const httpRequest = async () => {
-      let data;
+  }, [URLReceitas, callFecth]);
 
-      if (method === "POST") {
+  //refatorando fetch post
 
-        const resp = await fetch(urlBase, config);
-        data = await resp.json();
+  useEffect(() =>{
 
-        setDados((prevDados) => [...prevDados, data]);
-        alert("deu certo")
-      }
-       else if (method === "DELETE") {
-        const deleteUrl = `${urlBase}/${itemId}`;
-        const resp = await fetch(deleteUrl, config);
-        data = await resp.json();
-        setDados((prevDados) => prevDados.filter((item) => item.id !== itemId));
-      }
+   const httpRequest = async() =>{
+    let data 
 
-      setCallFetch(data);
-    };
+    if(method === "POST"){
 
-    if (config) {
-      httpRequest();
+      let fetchOptions = [URLReceitas, config];
+
+      const resp = await fetch(...fetchOptions);
+      data = await resp.json();
+
+    }else if(method === "DELETE"){  
+      const deleteUrl = `${URLReceitas}/${itemId}`
+
+      const resp = await fetch(deleteUrl,config);
+      data = await resp.json()
     }
-  }, [config, method, urlBase, itemId]);
 
-  return { dados, httpConfig, loading, error };
+    setCallFecth(data);
+   }
+
+   httpRequest();
+
+  }, [config, method, URLReceitas, itemId]);
+
+  return {dados, httpConfig, loading, error};
 };

@@ -17,10 +17,10 @@ const NavBar = () => {
     <nav className={styles.navB}>
         <ul className={styles.navList}>
             <li className={styles.navItem}>
-                <Link className={styles.links} to="/"> Login </Link>
+                <Link className={styles.links} to="/"> <span>Login</span> </Link>
             </li>
             <li className={styles.navItem}>
-                <button className='btn btn-outline' onClick={() => {logOut()}}>LogOut</button>
+                <button className={styles.btnSair} onClick={() => {logOut()}}>LogOut</button>
             </li>
         </ul>
     </nav>

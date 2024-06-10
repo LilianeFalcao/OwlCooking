@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #e6e6e6;
 }
 
 code {
@@ -38,8 +39,8 @@ input, textarea{
 }
 
 .btn{
-  background-color: #222;
-  color: goldenrod;
+  background-color: #FA8072;
+  color: black;
   align-items: center;
   border-radius:5px;
   text-decoration: none;
@@ -54,27 +55,9 @@ input, textarea{
   margin-bottom: 10em;
   margin-left: 25px;
 }
-
-.btn.btn-dark{
-  background-color: goldenrod;
-  border-radius: 0;
-  color: #222;
-}
-
-
-.btn.btn-outline{
-  background-color: transparent;
-  border-radius: 0;
-  margin: 0;
-  border: 1px solid black;
-  padding: 7px 30px;
-  margin-left: 65em;
-  color:white;
-}
-
 .btn:hover{
-  background-color: goldenrod;
-  color: #222;
+  background-color: #cc695e;
+  color: white;
 }
 
 .btn.btn-outline:hover{

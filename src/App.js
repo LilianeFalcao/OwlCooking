@@ -32,7 +32,8 @@ const App = () => {
           <Route path='/receitas/:id' element={ <Receitas 
               URLReceitas={URLReceitas}
               receitas={receitas}/>} />
-          <Route path='/novasReceitas' URLReceitas={URLReceitas} element={ <NovasReceitas />} />
+          <Route path='/novasReceitas' 
+              URLReceitas={URLReceitas} element={ <NovasReceitas />} />
           <Route path='*' element={ <NotFoundPage />} />
         </Routes>
         <Footer />

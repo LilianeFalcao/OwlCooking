@@ -41,6 +41,10 @@ const Login = ({ BaseUrl }) => {
   
     authenti();
   }
+
+  const irCadastro = () => {
+    navigate("/cadastro")
+  }
   
   return (
     <div>
@@ -70,7 +74,7 @@ const Login = ({ BaseUrl }) => {
             </label>
             <div className={styles.DivButtion}>
               <button className='btn'>Login</button>
-              <button className='btn'><Link to="/cadastro">Cadastro</Link></button>
+              <button onClick={irCadastro} className='btn'>Cadastro</button>
             </div>
         </form>
     </div>

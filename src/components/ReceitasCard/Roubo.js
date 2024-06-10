@@ -4,6 +4,7 @@ import styled from "styled-components";
 export const CursosContainer = styled.div`
   padding: 20px;
   min-height: 100vh;
+  margin-bottom: 15px
 `;
 
 export const CursosList = styled.ul`

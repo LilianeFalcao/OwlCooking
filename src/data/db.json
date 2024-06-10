@@ -43,6 +43,24 @@
       "title": "Dadinho de tapioca",
       "desc": "aaaaaaaaaaaaaaaaaaaaaa",
       "imageUrl": "https://www.mariareceita.com.br/wp-content/uploads/2022/03/receita-dadinho-tapioca-facil-original-1200x900.jpg"
+    },
+    {
+      "id": "aeef",
+      "title": "nhoque",
+      "desc": "1 kg de batata (mas preferencialmente a Batata Monalisa ou Asterix);\n2 xícaras de farinha de trigo;\n1 ovo;\nsal a gosto.",
+      "imageUrl": "https://imgs.search.brave.com/wQt5rl_4mwnnshlLh-Ws3XmF2qHQVvEe0sV46sOThT4/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/cmVjZWl0ZXJpYS5j/b20uYnIvd3AtY29u/dGVudC91cGxvYWRz/L25ob3F1ZS1kZS1t/YWlvbmVzZS1mYWNp/bDAxMy03MzB4NDc3/LnBuZw"
+    },
+    {
+      "id": "590f",
+      "title": "macarrão a carbonara",
+      "desc": "queijo parmesão ou pecorino, bacon ou guanciale (bochecha de porco curada), ovos e pimenta-do-reino",
+      "imageUrl": "https://imgs.search.brave.com/vGQGW8zikyvhHaDJyurdTzwssEzXxIjTpXDyNBM6I6c/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jb250/ZXVkby5pbWd1b2wu/Y29tLmJyL2MvZW50/cmV0ZW5pbWVudG8v/ZTAvMjAyMi8wNS8w/OS9jYXJib25hcmEt/LS1yb25hbGQtMTY1/MjEwMDQzMDgxMV92/Ml80NTB4NjAwLmpw/Zw"
+    },
+    {
+      "id": "29f8",
+      "title": "Takoyki",
+      "desc": "200g de farinha de trigo\n2 ovos\n600ml de água (preferencialmente dashi, um caldo de peixe japonês)\n1 colher de sopa de molho de soja\n1/2 colher de chá de sal\n1/2 colher de chá de açúcar",
+      "imageUrl": "https://imgs.search.brave.com/ZSSTi8RAnRIIfR42wKI-EX0wGbvlTHqxfXijCDhqwVs/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTgz/OTQ4MzI2L3Bob3Rv/L3Rha295YWtpLmpw/Zz9zPTYxMng2MTIm/dz0wJms9MjAmYz12/TVV5X0s3di1VTmtI/SnpNTS05dUw4emVP/MGQ4OWwyVU5nSVJq/TVI4VExzPQ"
     }
   ]
 }
