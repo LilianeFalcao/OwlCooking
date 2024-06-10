@@ -1,5 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
+import styles from "./Receitas.module.css"
 
 const Receitas = ({ receitas }) => {
   const { id } = useParams()
@@ -15,9 +16,11 @@ const Receitas = ({ receitas }) => {
   }
 
   return (
-    <div>
+    <div className={styles.bodyCont}>
+      <img className={styles.imgs} src={receita.imageUrl} alt={receita.title} />
       <h1>{receita.title}</h1>
-      <p>{receita.desc}</p>
+      <h1>Ingredientes:</h1>
+      <p className={styles.ingred}>{receita.desc}</p>
     </div>
   )
 }

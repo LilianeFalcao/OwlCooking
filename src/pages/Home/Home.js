@@ -7,7 +7,7 @@ const Home = ({receitas}) => {
   const navigate = useNavigate();
   
   const formAddReceita = () =>{
-    navigate("/formAdd");
+    navigate("/novasReceitas");
   }
   return (
     <div className={styles.aff}>
@@ -16,8 +16,7 @@ const Home = ({receitas}) => {
           receitas={receitas}
           navigate={navigate}
         />
-
-      <button onClick={()=> {formAddReceita()}} className={styles.addButton}> + </button>
+        <button onClick={()=> {formAddReceita()}} className={styles.addButton}> + </button>
       </article> 
     </div>
   )

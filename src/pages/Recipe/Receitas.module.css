@@ -1,0 +1,17 @@
+.bodyCont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgs{
+    width: 280px;
+    height: 280px;
+    margin-top: 25px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.ingred{
+    font-size: 1.5em;
+}
