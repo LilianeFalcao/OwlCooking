@@ -10,7 +10,7 @@ const Home = ({receitas}) => {
     navigate("/novasReceitas");
   }
   return (
-    <div style={{backgroundImage: `url(https://i.pinimg.com/564x/85/d2/88/85d28899a4b28f75e91500a772994e5c.jpg)`}} className={styles.aff}>
+    <div style={{backgroundImage: `url(https://i.pinimg.com/564x/85/d2/88/85d28899a4b28f75e91500a772994e5c.jpg)`}}  className={styles.aff}>
       <article className={styles.containerHome}>
         <Card  
           receitas={receitas}

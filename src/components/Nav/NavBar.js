@@ -20,6 +20,9 @@ const NavBar = () => {
                 <Link className={styles.links} to="/"> <span>Login</span> </Link>
             </li>
             <li className={styles.navItem}>
+                <Link className={styles.links} to="/home"> <span>Home</span> </Link>
+            </li>
+            <li className={styles.navItem}>
                 <button className={styles.btnSair} onClick={() => {logOut()}}>LogOut</button>
             </li>
         </ul>

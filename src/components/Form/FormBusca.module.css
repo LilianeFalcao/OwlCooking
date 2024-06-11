@@ -1,0 +1,35 @@
+.LabelInput {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.SearchContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.Inputs {
+    padding: 10px;
+    margin: 5px 0;
+    margin-top: 60px;
+    flex: 1; /* This makes the input take the remaining space */
+}
+
+.buttonBusca {
+    flex-direction: row;
+    background-color: #222;
+    color: aliceblue;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-top: 70px;
+    cursor: pointer; /* Adds a pointer cursor on hover */
+}

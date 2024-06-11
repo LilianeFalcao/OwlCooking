@@ -11,10 +11,9 @@
 
 .addButton{
   padding: 15px 20px;
-  justify-content: flex-end;
   width: 50px;
   margin: 5px;
-  background-color: goldenrod;
+  background-color: #FA8072;
   color: black;
   font-weight: 900;
   font-size: 16px;
@@ -23,6 +22,6 @@
   cursor: pointer;
 }
 .addButton:hover{
-  background-color: #0e0e0e;
+  background-color: #cc695e;
   color: white;
 }

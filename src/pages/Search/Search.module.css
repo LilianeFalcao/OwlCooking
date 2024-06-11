@@ -1,0 +1,44 @@
+.US {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  overflow: hidden;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  
+  &:hover{
+    cursor: pointer;
+  }
+}
+.titulo{
+  text-align: center;
+}
+.Lis{
+  background-color:#ef9488;
+  box-shadow: 5px 10px 8px 5px #3f3837;
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  margin: 0;
+}
+
+.LisHQ{
+  font-size: 20px;
+  margin: 0 0 10px;
+  color: black;
+  text-align: center;
+}
+
+.Lis img {
+  width: 280px;
+  height: 280px;
+  margin-top: 25px;
+  border-radius: 10px;
+  border: 2px solid black;
+  justify-content: center;
+  box-shadow: 5px 10px 8px 2px #3f3837;
+  object-fit: cover;
+}
